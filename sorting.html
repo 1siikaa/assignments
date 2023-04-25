@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorting</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <h3>1) In ascending order:</h3>
+    <p id="question1" style="border:1px solid black; padding:20px; border-radius:7px; margin-right:490px;"></p><br>
+    <p id="answer1" onclick="ascending()"style="border:1px solid blue; padding:20px; border-radius: 7px; margin-right:490px;"> Click here to convert! </p><br>
+
+    <br>
+    <h3>2) In descending order:</h3>
+    <p id="question2" style="border:1px solid black; margin-right:490px; padding:20px; border-radius: 7px;"></p><br>
+    <p id="answer2" onclick="descending()" style="border:1px solid blue; padding:20px; border-radius: 7px;margin-right:490px; padding: 20px;">Click here to convert!</p><br>
+    <br>
+
+    <script>
+
+       var numbers = [555, 222, 777, 111, 333, 444, 666, 888, 0];
+        document.querySelector("#question1").innerHTML = numbers;
+        document.querySelector("#question1").style.backgroundColor = "grey";
+        
+function ascending(){
+        numbers.sort(function (a, b) {
+            return a - b
+
+        });
+     document.querySelector("#answer1").innerHTML = numbers;
+     document.querySelector("#answer1").style.backgroundColor = "cyan";
+};
+    
+    
+    
+    
+    
+    
+var numbers = [555, 222, 777, 111, 333, 444, 666, 888, 0];
+    
+     document.querySelector("#question2").innerHTML = numbers;
+    document.querySelector("#question2").style.backgroundColor = "grey";
+
+    
+function descending(){
+        numbers.sort(function (a, b) {
+            return b - a
+
+        });
+        document.querySelector("#answer2").innerHTML = numbers;
+        document.querySelector("#answer2").style.backgroundColor = "cyan";
+    };
+
+    </script>
+</body>
+
+</html>
